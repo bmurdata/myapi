@@ -1,7 +1,7 @@
 # Mongo DB connection- populate dbLocal.py file
-import dbLocal
-db=dbLocal.db
-monConnection=dbLocal.monConnection
+import dbLocal2
+db=dbLocal2.db
+monConnection=dbLocal2.monConnection
 
 import pymongo, json
 # Insert JSON files into the collection
