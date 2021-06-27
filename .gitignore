@@ -352,3 +352,5 @@ MigrationBackup/
 .python_packages
 .venv
 local.settings.json
+.vscode
+.funcignore
