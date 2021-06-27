@@ -354,4 +354,5 @@ MigrationBackup/
 local.settings.json
 .vscode
 .funcignore
-dbLocal.py
+dbLocal2.py
+venv
