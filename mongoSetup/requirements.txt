@@ -3,3 +3,4 @@
 azure-functions
 pymongo
 dnspython
+Flask-PyMongo
