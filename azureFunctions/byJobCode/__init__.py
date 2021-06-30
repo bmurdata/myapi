@@ -9,7 +9,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     searchCollection="jobsByCode"
     logging.info('Python HTTP trigger function processed a request.')
 
-    code = req.params.get('code')
+    code = req.params.get('jnum')
     if not code:
         try:
             req_body = req.get_json()

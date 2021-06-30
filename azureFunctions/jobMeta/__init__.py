@@ -8,14 +8,14 @@ import dbLocal2 as dbsetup
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
     searchCollection="jobInfo_Meta"
-    code = req.params.get('code')
+    code = req.params.get('jnum')
     if not code:
         try:
             req_body = req.get_json()
         except ValueError:
             pass
         else:
-            name = req_body.get('code')
+            name = req_body.get('jnum')
     if code:
         try:
             url = dbsetup.monConnection

@@ -8,14 +8,14 @@ import dbLocal2 as dbsetup
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
     searchCollection="jobInfo_Content"
-    code = req.params.get('code')
+    code = req.params.get('jnum')
     if not code:
         try:
             req_body = req.get_json()
         except ValueError:
             pass
         else:
-            name = req_body.get('code')
+            name = req_body.get('jnum')
     if code:
         try:
             url = dbsetup.monConnection
@@ -31,7 +31,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             m=list(result)
             logging.info(len(m))
         except:
-            result="[{'Error':'No Result by that code. Enter numerical value. Example: code=12345'}]"
+            result="[{'Error':'No Result by "+str(code)+" Enter numerical value. Example: code=12345'}]"
             logging.info("Error")
         if len(result)==2:
             result="[{'Error':'No Result by that code. Enter numerical value. Example: code=12345'}]"
