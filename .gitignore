@@ -352,7 +352,7 @@ MigrationBackup/
 .python_packages
 .venv
 local.settings.json
-.vscode
+
 .funcignore
 dbLocal2.py
 venv
