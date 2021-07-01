@@ -11,6 +11,11 @@ My LinkedIn: https://www.linkedin.com/in/brianmurphy94/
 Link to scraper Repo: https://github.com/bmurdata/NYCGovJobSearch  
 Link to full Flask Implementation: https://github.com/bmurdata/GovJobSearch_Web
 
+### Tools
+* MongoDB Atlas Free Cluster(M0)
+* Azure Functions
+* Python 3.8 -PyMongo, Azure Functions, and dnspython packages
+
 ## Progress
 * API Functional- returns results from MongoDB as JSON objects to browser.
 * Security- Function key level. 
@@ -22,6 +27,8 @@ https://nycgovjobs.azurewebsites.net/api/jobPost
 https://nycgovjobs.azurewebsites.net/api/jobMeta
 
 All three take parameters jnum, where jnum is the jobID. If none is given, all results in collections are returned.
+Code can be found under azurefunctions folder, and MongoDB setup folder and search contain code to establish and work with MongoDB. 
+
 ## What I have
 GCP Ubuntu virtual machine running Python Flask and Python Selenium to display and update scrape data. MySQL as a database, and cron jobs to run updates twice daily.
 
