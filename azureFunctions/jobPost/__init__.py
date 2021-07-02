@@ -23,7 +23,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             database = client[dbsetup.db]
             collection = database[searchCollection]
 
-            result = collection.find({"jobNum":str(code)},{"_id":False})
+            result = collection.find({"jobNum":{"$regex":str(code),"$options":"-i"}},{"_id":False})
             
             result = dumps(result)
             logging.info("Processing result")
